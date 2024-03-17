@@ -1,0 +1,40 @@
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* colume = 높이, row = 너비*/
+}
+
+.center .name__input {
+  appearance: none; /* 기본 모양 제거 */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8); /* 이렇게도 나타낼 수 있음 */
+  margin-bottom: 20px;
+}
+
+.center .name__input::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-size: 25px;
+  text-align: center;
+}
+
+.center .name__input:focus,
+.center .name__input:active {
+  outline: none;
+}
+
+.center .name__text {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#greeting {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}

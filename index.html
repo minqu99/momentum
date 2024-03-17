@@ -6,36 +6,51 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
   </head>
+
   <body>
-    <form id="login-form" class="hidden">
-      <!-- input의 유효성 검사하기 위해서는 form 을 사용해야한다. 
+    <section class="center">
+      <h2 id="clock" class="css_clock">00:00:00</h2>
+
+      <form id="login-form" class="hidden">
+        <!-- input의 유효성 검사하기 위해서는 form 을 사용해야한다. 
      그리고 enter로 submit 가능 *주의* 근데 새로고침이 된다-->
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-      <!-- input안의 button 이나 input type="button"을 누르면 form 은 submit되고 사이트는 새로고침 된다.-->
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
+        <input
+          class="name__input"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="Type your name here."
+          onfocus="this.placeholder=''"
+          onblur="this.placeholder='Type your name here.'"
+        />
+        <!-- <button>Log In</button> -->
+        <!-- input안의 button 이나 input type="button"을 누르면 form 은 submit되고 사이트는 새로고침 된다.-->
+      </form>
 
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press" required />
-    </form>
+      <h1 id="greeting" class="hidden"></h1>
 
-    <ul id="todo-list"></ul>
+      <form id="todo-form" class="css_todo">
+        <input
+          id="todo"
+          type="text"
+          placeholder="Write a To Do"
+          onfocus="this.placeholder=''"
+          onblur="this.placeholder='Write a To Do'"
+          required
+        />
+      </form>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+      <ul id="todo-list" class="css_list"></ul>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <div id="location">
+      <span class="css_weather"></span>
+      <span class="css_city"></span>
     </div>
 
     <!-- <a href="https://nomadcoders.co">Go to courses</a> -->
@@ -44,6 +59,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/location.js"></script>
   </body>
 </html>

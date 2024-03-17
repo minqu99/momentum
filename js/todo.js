@@ -29,6 +29,7 @@ function paintTodo(newTodoObj) {
 
   const button = document.createElement("button");
   button.innerText = "❌";
+  button.className = "todo_button";
   button.addEventListener("click", deleteTodo); // event listen
   // 어떤 button이 click됐는지 알기 어렵다. -> event가 click 위치를 알려준다.(속성에 담겨있음)
 

@@ -1,0 +1,75 @@
+body,
+html {
+  overflow: hidden; /* html 요소 밖으로 빠져나오면 잘라버림 (visible, scroll, auto) */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  background: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  /*  css에 애니메이션 구간 설정, like function? */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  background-size: cover; /* 이미지가 요소 모두 덮도록 함 */
+  background-position: center center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  /* ease-in-out: 속도 조정(천천-보통-천천) */
+  animation-delay: 0.5s;
+  color: white;
+  display: flex; /* 자식 요소 flex container에 가로 정렬 <=> block */
+  align-items: center; /* 자식 요소를 중앙에 정렬 */
+  justify-content: center;
+}
+
+input {
+  background: none;
+  appearance: none;
+  border: 0;
+  font-size: 22px;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+input:focus, /* 마우스 해당 요소 클릭시 나오는 css 변경 */
+input:active {
+  /* 마우스가 해당 요소 클릭하고 떼는 순간까지 요소 css 변경 */
+  outline: none;
+}
+
+#quote span {
+  display: block;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none; /* 목록의 머리 기호 정한다 */
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin-top: 50px;
+}

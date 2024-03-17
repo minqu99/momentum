@@ -58,4 +58,4 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]; // random
 // Math.floor() // 내림
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = `- ${todaysQuote.author} -`;

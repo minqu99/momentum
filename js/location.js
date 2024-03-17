@@ -10,11 +10,11 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector("#location span:first-child");
+      const city = document.querySelector("#location span:last-child");
 
+      weather.innerText = `${data.weather[0].main} \n ${data.main.temp}`;
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     }); // js가 브라우저에 url을 요청헤서 get, 이걸 이용해서 코드를 짤 수 있다.
   // fetch로 url 얻고 (then) json 응답 얻고(main 내용) (then) 안의 data 중 선택해서 get
 }
